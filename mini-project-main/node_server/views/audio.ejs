@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript">
+
+        // Audio 객체생성 ①
+        // var audio = new Audio('./lucky.mp3');
+    
+        // Audio 객체생성 ②
+        var audio = new Audio();
+        audio.src = "http://localhost:3000/audio/62051c845bf719b2587f1aec";
+
+    </script>
+</head>
+  <body>
+    <input type="button" onClick="audio.play();" value="PLAY"/>
+    <input type="button" onClick="audio.pause();" value="PAUSE"/>
+    <input type="number" onChange="audio.currentTime=this.value"/>
+    <input type="number" onChange="audio.volume=this.value"/>
+
+    <audio autoplay controls> <source src="http://localhost:3000/audio/62051c845bf719b2587f1aec" type="audio/mp3"> </audio>
+
+  </body>
+</html>
